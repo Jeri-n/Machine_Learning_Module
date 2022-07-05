@@ -1,0 +1,63 @@
+NumPy
+-----
+	NumPy is a Python library
+	NumPy is used for working with arrays
+	NumPy is short for "Numerical Python"
+
+NumPy Introduction
+------------------
+What is NumPy?
+	NumPy is a Python library used for working with arrays.
+	It also has functions for working in domain of linear algebra, fourier transform, and matrices.
+	NumPy was created in 2005 by Travis Oliphant. It is an open source project and you can use it freely.
+	NumPy stands for Numerical Python.
+
+Why Use NumPy?
+	In Python we have lists that serve the purpose of arrays, but they are slow to process.
+	NumPy aims to provide an array object that is up to 50x faster than traditional Python lists.
+	The array object in NumPy is called ndarray, it provides a lot of supporting functions that make working with ndarray very easy.	
+	Arrays are very frequently used in data science, where speed and resources are very important.
+
+Why is NumPy Faster Than Lists?
+	Will show the Live Demo on this topic.
+
+Which Language is NumPy written in?
+	NumPy is a Python library and is written partially in Python, but most of the parts that require fast computation are written in C or C++.
+
+Where is the NumPy Codebase?
+	The source code for NumPy is located at this github repository https://github.com/numpy/numpy
+	
+Installation of NumPy
+	pip install numpy
+
+Import NumPy
+	import numpy
+	Now NumPy is imported and ready to use.
+
+	
+Reference:
+https://numpy.org/doc/stable/numpy-ref.pdf
+
+
+pip install <package-name>
+
+----------------
+Videos Reference
+----------------
+
+How NumPy Arrays are faster than Python List?
+https://www.youtube.com/watch?v=cAmkgMnKx34&t=321s
+
+Numpy Tutorial - Introduction to Arrays in Python
+https://www.youtube.com/watch?v=biLz7KPgHJA
+
+Numpy Tutorial Python - Array Creation
+https://www.youtube.com/watch?v=Qgh1vjmaj44&list=RDCMUC4JX40jDee_tINbkjycV4Sg&start_radio=1&rv=Qgh1vjmaj44&t=0
+
+Numpy Full Course 
+https://www.youtube.com/watch?v=j31ah5Qa4QI
+
+
+
+
+

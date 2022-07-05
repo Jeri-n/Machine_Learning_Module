@@ -1,0 +1,149 @@
+
+Machine Learning Work Flow
+==========================
+
+step1 - Problem and Data Identification
+step2 - EDA,Feature Engineering and Feature Selection 
+step3 - Model selection and training
+step4 - hosting of the solution
+
+Note: 75% of the time is spend for EDA,Feature Engineering and Feature Selection (Preprocessing)
+
+EDA - Exploratory Data Analysis
+==============================
+
+One of the most important steps in Data Analytics
+
+Definitions
+============
+Exploratory Data Analysis (EDA) is an approach/philosophy for data analysis that employs a variety of techniques (mostly graphical) to
+
+* maximize insight into a data set
+* uncover underlying structure
+* extract important variables
+* detect outliers and anomalies
+
+Libraries used
+==============
+For EDA we will be using Pandas,sklearn, Matplotlib and Seaborn Libraries
+
+General outline for Feature Engineering
+=======================================
+Step 1. EDA - Exploratory Data Analysis
+		a. Preview data - head(),tail(),describe(),info()
+		b. Check total number of entries and column types -shape, dtypes
+		c. Check any null values 
+		d. Check duplicate entries
+		e. Check outlier values
+		f. Plot distribution of numeric data (univariate and pairwise joint distribution) - different graphs
+		g. Plot count distribution of categorical data - histogram/box-plot
+		
+Step 2. Handling Missing Values
+		a. Mean/ Median/Mode replacement
+		b. Random Sample Imputation
+		c. Capturing NAN values with a new feature
+		d. End of Distribution imputation
+		e. Arbitrary imputation
+		f. Frequent categories imputation
+		
+Step 3: Handling Outliers 
+		Approach 1 : Outlier Detection with Standard Deviation
+		Approach 2 : Outlier Detection with Percentiles
+
+		Solution:
+		An Outlier Dilemma: Drop or Cap
+		
+Step 4: Handling Imbalance Datasets
+		a. SMOTE - Synthetic Minority Over-sampling Technique
+
+Step 5: Categorical Encoding
+		1. Nominal Encoding  
+			a. OneHot Encoding
+			b. OneHot Encoding with many categories
+			c. Mean Encoding
+			
+		2. Ordinal Encoding 
+			a. Label Encoding
+			b. Target guided Ordinal Encoding
+
+Step 6: Normalization and Standardization
+		a. Normalization And Standardization
+		b. Scaling to Minimum And Maximum values
+		c. Scaling To Median And Quantiles
+		d. Gaussian Transformation
+		   * Logarithmic Transformation
+		   * Reciprocal Transformation
+		   * Square Root Transformation
+		   * Exponential Transformation
+		   * Box Cox Transformation
+
+
+General outline for Feature Selection
+=====================================
+Approach 1: Correlation
+
+Approach 2: Forward Elimination
+
+Approach 3: Backward Elimination
+
+Approach 4: Random-forest Importance
+
+Approach 5: Decision Tree Feature election
+
+
+
+Plot
+====
+Univariate analysis
+ * Histogram
+ * Box-plot
+ 
+Multivariate analysis
+ * Box-plot
+ * Line-plot
+ * Scatter-plot
+
+Box plots are a standardized way of displaying the distribution of data based on a five number summary 
+ * minimum
+ * first quartile (Q1)
+ * median
+ * third quartile (Q3)
+ * maximum
+ 
+IQR= Q3-Q1
+
+Box-plot is used to identify the outlier values.
+
+Handling Outliers
+=================
+
+Outlier Detection with Standard Deviation
+-----------------------------------------
+
+#Dropping the outlier rows with standard deviation
+factor = 3
+upper_lim = data['column'].mean () + data['column'].std () * factor
+lower_lim = data['column'].mean () - data['column'].std () * factor
+
+data = data[(data['column'] < upper_lim) & (data['column'] > lower_lim)]
+
+
+Outlier Detection with Percentiles
+----------------------------------
+
+#Dropping the outlier rows with Percentiles
+upper_lim = data['column'].quantile(.95)
+lower_lim = data['column'].quantile(.05)
+
+data = data[(data['column'] < upper_lim) & (data['column'] > lower_lim)]
+
+
+An Outlier Dilemma: Drop or Cap
+-------------------------------
+
+#Capping the outlier rows with Percentiles
+upper_lim = data['column'].quantile(.95)
+lower_lim = data['column'].quantile(.05)
+
+data.loc[(df[column] > upper_lim),column] = upper_lim
+data.loc[(df[column] < lower_lim),column] = lower_lim

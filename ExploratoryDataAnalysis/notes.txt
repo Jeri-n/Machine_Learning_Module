@@ -1,0 +1,28 @@
+How to open jupyternotebook 
+take the reqd folder, search cmd in location bar,type as below;
+
+E:\AI\LibrariesForAI\NumPy>conda activate base
+
+(base) E:\AI\LibrariesForAI\NumPy>jupyter notebook
+
+
+how to access previous work from anaconda cmd
+(base) C:\Users\HP>e:
+
+(base) E:\>cd "AI\LibrariesForAI\NumPy"
+
+(base) E:\AI\LibrariesForAI\NumPy>jupyter notebook
+
+
+
+cd= change directory
+
+
+
+To exit from numpy and to go to pandas
+ctrl z
+(base) E:\AI\LibrariesForAI\NumPy>cd ..
+
+(base) E:\AI\LibrariesForAI>cd Pandas
+
+(base) E:\AI\LibrariesForAI\Pandas>jupyter notebook

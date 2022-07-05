@@ -1,0 +1,34 @@
+Ridge and Lasso Regression are types of Regularization techniques
+Regularization techniques are used to deal with overfitting and when the dataset is large
+Ridge and Lasso Regression involve adding penalties to the regression function
+
+LASSO stands for Least Absolute Shrinkage and Selection Operator. 
+
+Ridge Regression:
+	Performs L2 regularization, i.e. adds penalty equivalent to square of the magnitude of coefficients
+	Minimization objective = LS Obj + α * (sum of square of coefficients)
+Lasso Regression:
+	Performs L1 regularization, i.e. adds penalty equivalent to absolute value of the magnitude of coefficients
+	Minimization objective = LS Obj + α * (sum of absolute value of coefficients)
+	
+Note that here ‘LS Obj’ refers to ‘least squares objective’, i.e. the linear regression objective 
+without regularization.
+
+
+1. Key Difference
+Ridge: It includes all (or none) of the features in the model. Thus, the major advantage of ridge regression
+ is coefficient shrinkage and reducing model complexity.
+ 
+Lasso: Along with shrinking coefficients, 
+ lasso performs feature selection as well. (Remember the ‘selection‘ in the lasso full-form?) 
+ some of the coefficients become exactly zero, which is equivalent to the 
+ particular feature being excluded from the model.
+ 
+2. Typical Use Cases
+Ridge: It is majorly used to prevent overfitting. Since it includes all the features,
+	it is not very useful in case of exorbitantly high #features, say in millions, as it will pose computational challenges.
+Lasso: Since it provides sparse solutions, it is generally the model of choice 
+	(or some variant of this concept) for modelling cases where the #features are in millions or more. 
+	In such a case, getting a sparse solution is of great computational advantage as the features with zero coefficients can simply be ignored.
+	Its not hard to see why the stepwise selection techniques become practically very 
+	cumbersome to implement in high dimensionality cases. Thus, lasso provides a significant advantage.
